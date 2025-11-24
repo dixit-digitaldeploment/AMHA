@@ -335,12 +335,45 @@ $(window).on('load', function() {
         var headerHeight = $('.main_header').outerHeight(true); // Include margin
 
         // Assign the height as padding-top to the main_wrapper
-        $('.main_wrapper').css('padding-top', headerHeight + 'px');
+        $('.main_wrapper,.main_banner').css('padding-top', headerHeight + 'px');
     }
 });
 $('.close').on('click', function() {
-    $('.main_wrapper').css('padding-top', ''); // Reset padding to default
+    $('.main_wrapper,.main_banner').css('padding-top', ''); // Reset padding to default
 });
+
+
+function setHeroHeight() {
+    var headerHeight = jQuery("header").outerHeight();
+    var alertbar = jQuery(".alert-area").is(":visible")
+      ? jQuery(".alert-area").outerHeight()
+      : 0;
+    jQuery(".main_wrapper, .main_banner").css("padding-top", headerHeight + "px");
+    // if (jQuery("#wpadminbar").length) {
+    //   jQuery(".alert-area").css("top", headerHeight + 30 + "px");
+    //   jQuery(".kt-tabs-title-list").css(
+    //     "top",
+    //     headerHeight + alertbar + 30 + "px"
+    //   );
+    // } else {
+    //   jQuery(".alert-area").css("top", headerHeight + "px");
+    //   jQuery(".kt-tabs-title-list").css("top", headerHeight + alertbar + "px");
+    // }
+  }
+  
+  //   Initial run
+  setHeroHeight();
+  
+  //   Observe header size changes
+  const header = document.querySelector("header");
+  
+  if (header && "ResizeObserver" in window) {
+    const resizeObserver = new ResizeObserver(() => {
+      setHeroHeight();
+    });
+    resizeObserver.observe(header);
+  }
+  
 
 
 

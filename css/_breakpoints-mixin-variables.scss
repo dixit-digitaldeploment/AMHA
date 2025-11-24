@@ -87,11 +87,11 @@ $breakpoints:( "xs":0, "sm":480px, "md":768px, "lg":992px, "xl":1200px, );
 }
 
 @mixin primary-font {
-    font-family: 'Inter', sans-serif;
+    font-family: "Ubuntu", sans-serif;
 }
 
 @mixin secondary-font {
-    font-family: 'DM Sans', sans-serif;
+    font-family:  "Source Sans 3", sans-serif;
 }
 
 @mixin upper {
@@ -148,27 +148,27 @@ $breakpoints:( "xs":0, "sm":480px, "md":768px, "lg":992px, "xl":1200px, );
 }
 
 //Variables
-$primary:#08164E;
-$secondary:#D8790D;
+$primary:#052E70;
+$secondary:#014796;
+$blue:#015FC9;
+$skyblue:#0077D9;
+$lightblue:#EFF7FF;
+$black:#222222;
+$white:#ffffff;
+$gray:#797979;
+$lightgray:#E1E0E0;
+
 $orange:#D8790D;
 $yellow:#ECAF3B;
 $border-color:#D8612E;
 $darkblue:#193369;
-$lightblue:#F0F5FB;
 $red:#D60004;
 $red-hover:#C50105;
 $green:#5B7E15;
-$blue:#004B8F;
 $purple:#7A4090;
 $bg-blue:#14213f;
-$black:#000;
-$white:#ffffff;
-$gray:#555554;
-$lightgray:#F5F5F5;
-$primary-font: 'Inter',
-sans-serif;
-$secondary-font:'DM Sans',
-sans-serif;
+$primary-font: "Ubuntu", sans-serif;
+$secondary-font: "Source Sans 3", sans-serif;
 $shadow:0px 1px 3px 0px rgba(0, 0, 0, 0.15);
 // color paltte - 
 $colors:( "primary":$primary, "secondary":$secondary, "green":#008943, "black":#000, "lightgray":#F5F5F5);
