@@ -304,10 +304,12 @@ video {
 }
 
 .form-control {
-    min-height: 40px;
+    min-height: 50px;
     background-color: $white;
-    border: 1px solid #000;
+    border: 1px solid #797979;
     border-radius: 5px;
+    padding: 8px 14px;
+    font-size: 15px;
 }
 
 .no-margin {
@@ -327,9 +329,9 @@ select {
     background-repeat: no-repeat;
     -webkit-appearance: none;
     -moz-appearance: none;
-    background-position: top 14px right 12px;
+    background-position: top 22px right 12px;
     min-width: 130px;
-    background-size: 18px;
+    background-size: 14px;
     color: $black;
     border: 1px solid #000;
     border-radius: 5px;
@@ -370,8 +372,10 @@ select {
 }
 
 label.title {
-    font-weight: 700;
-    @include primary-font;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    margin-bottom: 2px;
 }
 
 ::-webkit-input-placeholder {
