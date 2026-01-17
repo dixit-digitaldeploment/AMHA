@@ -479,3 +479,15 @@ jQuery(document).ready(function ($) {
     }
   });
 });
+
+document.querySelectorAll('.select-building .dropdown-item').forEach(item => {
+  item.addEventListener('click', function (e) {
+    e.preventDefault();
+
+    const dropdown = this.closest('.select-building');
+    const button = dropdown.querySelector('.dropdown-toggle');
+
+    button.textContent = this.textContent;
+    button.dataset.value = this.dataset.value;
+  });
+});
