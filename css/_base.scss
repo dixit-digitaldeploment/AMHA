@@ -301,6 +301,10 @@ strong {
     padding-left: var(--bs-gutter-x);
 }
 
+.row-gap {
+    row-gap: 24px;
+}
+
 img {
     max-width: 100%;
     height: auto;
@@ -311,12 +315,14 @@ video {
 }
 
 .form-control {
-    min-height: 50px;
-    background-color: $white;
-    border: 1px solid #797979;
-    border-radius: 5px;
-    padding: 8px 14px;
-    font-size: 15px;
+    min-height: 45px;
+    border: 1px solid #f3eee4;
+    background: #fff;
+    border-radius: 0px;
+    padding: 8px 12px 8px 8px;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
 }
 
 .no-margin {
@@ -331,7 +337,7 @@ video {
 }
 
 select {
-    min-height: 50px;
+    min-height: 45px;
     background-image: url(../img/select-arrow.svg);
     background-repeat: no-repeat;
     -webkit-appearance: none;
@@ -340,7 +346,7 @@ select {
     min-width: 130px;
     background-size: 14px;
     color: $black;
-    border: 1px solid #000;
+    border: 1px solid #f3eee4;
     border-radius: 5px;
     &.form-control {
         color: #555554;
@@ -352,14 +358,16 @@ select {
 input[type="checkbox"] {
     width: 16px;
     height: 16px;
-    border-radius: 4px;
-    border: 1px solid var(--Black---70, #222);
+    border-radius: 0px;
+    border: 1px solid var(--Grayscale-Gray-400, #a0a0a0);
     background: var(--Grayscale-White, #fff);
     min-height: auto;
     appearance: initial;
     &:checked {
-        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M10.0705 3.13127C10.2467 3.30752 10.2467 3.59252 10.0705 3.7669L5.12047 8.71877C4.94422 8.89502 4.65922 8.89502 4.48484 8.71877L1.93297 6.16877C1.75672 5.99252 1.75672 5.70752 1.93297 5.53315C2.10922 5.35877 2.39422 5.3569 2.56859 5.53315L4.79984 7.7644L9.43297 3.13127C9.60922 2.95502 9.89422 2.95502 10.0686 3.13127H10.0705Z" fill="%23052E70"/></svg>');
+        background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M10.0705 3.13127C10.2467 3.30752 10.2467 3.59252 10.0705 3.7669L5.12047 8.71877C4.94422 8.89502 4.65922 8.89502 4.48484 8.71877L1.93297 6.16877C1.75672 5.99252 1.75672 5.70752 1.93297 5.53315C2.10922 5.35877 2.39422 5.3569 2.56859 5.53315L4.79984 7.7644L9.43297 3.13127C9.60922 2.95502 9.89422 2.95502 10.0686 3.13127H10.0705Z" fill="%23ffffff"/></svg>');
         background-size: contain;
+        background-color: #2f463a;
+        border-color: #2f463a;
         &::before {
             display: none !important;
         }
@@ -395,6 +403,10 @@ input[type="radio"] {
         align-items: center;
         margin-bottom: 8px;
         line-height: 24px;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        color: $black;
     }
 }
 
@@ -429,9 +441,10 @@ input[type="radio"] {
 }
 
 label.title {
-    font-size: 16px;
+    font-size: 14px;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 400;
+    color: $black;
     margin-bottom: 2px;
 }
 

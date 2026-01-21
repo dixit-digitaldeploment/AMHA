@@ -241,6 +241,7 @@
   position: relative;
   flex-direction: column;
   background: #2f463a;
+  overflow: hidden;
   &::after {
     content: "";
     background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="790" height="112" viewBox="0 0 790 112" fill="none"><path d="M831.286 178.182H109.793L470.539 -100L831.286 178.182Z" fill="white" fill-opacity="0.08"/><path d="M47.0539 221.818L0 260H945L901.867 221.818H780.311H47.0539Z" fill="white" fill-opacity="0.08"/></svg>')
