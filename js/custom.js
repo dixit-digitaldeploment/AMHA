@@ -480,12 +480,52 @@ jQuery(document).ready(function ($) {
   });
 });
 
-document.querySelectorAll('.select-building .dropdown-item').forEach(item => {
-  item.addEventListener('click', function (e) {
+(function ($) {
+  function toggleAccordion($title) {
+    var dropDown = $title.closest(".acc__card").find(".acc__panel");
+
+    $title.closest(".acc__main").find(".acc__panel").not(dropDown).slideUp();
+
+    if ($title.hasClass("active")) {
+      $title.removeClass("active");
+    } else {
+      $title
+        .closest(".acc__main")
+        .find(".acc__title.active")
+        .removeClass("active");
+      $title.addClass("active");
+    }
+
+    dropDown.stop(false, true).slideToggle();
+  }
+
+  $(".acc__main .acc__title")
+    .attr("tabindex", "0") // Make focusable
+    .attr("role", "button") // Assistive tech support
+    .attr("aria-expanded", "false") // Initial state
+    .on("click", function (e) {
+      toggleAccordion($(this));
+      e.preventDefault();
+    })
+    .on("keydown", function (e) {
+      if (
+        e.key === "Enter" ||
+        e.key === " " ||
+        e.keyCode === 13 ||
+        e.keyCode === 32
+      ) {
+        e.preventDefault();
+        toggleAccordion($(this));
+      }
+    });
+})(jQuery);
+
+document.querySelectorAll(".select-building .dropdown-item").forEach((item) => {
+  item.addEventListener("click", function (e) {
     e.preventDefault();
 
-    const dropdown = this.closest('.select-building');
-    const button = dropdown.querySelector('.dropdown-toggle');
+    const dropdown = this.closest(".select-building");
+    const button = dropdown.querySelector(".dropdown-toggle");
 
     button.textContent = this.textContent;
     button.dataset.value = this.dataset.value;
