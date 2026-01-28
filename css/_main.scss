@@ -528,7 +528,7 @@
   }
 }
 .no-found-info {
-  background: rgba(77, 126, 100, 0.60);
+  background: rgba(77, 126, 100, 0.6);
   padding: 64px 0px;
   text-align: center;
   max-width: 800px;
@@ -564,7 +564,7 @@
     margin-top: 30px;
     margin-bottom: 30px;
   }
-  .search_box{
+  .search_box {
     margin-bottom: 16px;
   }
   @include md {
@@ -587,10 +587,11 @@
 .page_title.resut_title {
 }
 .resultWraper {
-  padding: 80px 0;
+  padding: 80px 0 0;
+  background: #fffcf7;
 }
 .resultWraper .searchFilterBlock {
-  // padding-top: 45px;
+  padding-top: 24px;
   .filterBlock {
     form > * {
       margin-bottom: 24px !important;
@@ -606,6 +607,18 @@
           margin-bottom: 8px;
           line-height: 24px;
         }
+      }
+      &.search-box {
+        input {
+          border: 1px solid #f3eee4;
+          background: #fff;
+          box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.15);
+        }
+      }
+      select {
+        border: 1px solid #f3eee4;
+        background: #fff;
+        box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.15);
       }
     }
   }
@@ -639,8 +652,10 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   padding: 10px 15px 32px 15px;
+  max-width: 1000px;
+  margin: auto;
   &.no_result {
     text-align: center;
     > * {
@@ -785,9 +800,9 @@
 .rslt_txt {
   padding: 40px 0px 40px 0px;
   margin: auto;
-  background: #f5f5f5;
+  // background: #f5f5f5;
   .container {
-    max-width: 1230px;
+    max-width: 1000px;
   }
   .topTitle.text-left {
     margin-bottom: 20px;
@@ -798,6 +813,7 @@
 }
 
 .acc__card {
+  margin-bottom: 16px;
 }
 
 .acc__title {
@@ -882,40 +898,40 @@
 }
 
 .result_row {
-  border-radius: 0px;
-  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.15);
-  background: $white;
-  margin-bottom: 8px;
+  border: 1px solid #f3eee4;
+  background: var(--Grayscale-White, #fff);
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.25);
+  margin-bottom: 16px;
   border-radius: 0px;
   position: relative;
   h3,
   h4,
   h5,
   h2 {
-    font-size: 18px;
+    font-size: 16px;
     font-style: normal;
-    font-weight: 500;
-    color: #052e70;
-    margin-bottom: 8px;
+    font-weight: 600;
+    color: $black;
+    margin-bottom: 22px;
   }
   .rsltBody {
     padding: 16px 24px;
   }
   p {
     margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
   }
   .re_category {
-    margin-bottom: 8px;
-    border-radius: 5px;
-    background: #e8f6ff;
-    padding: 8px;
-    font-size: 16px;
+    font-size: 14px;
     font-style: normal;
-    font-weight: 600;
-    line-height: 1;
-    width: -moz-fit-content;
-    width: fit-content;
-    color: #052e70;
+    font-weight: 400;
+    color: $black;
+    margin-bottom: 14px;
   }
   > a {
     display: block;
@@ -924,9 +940,12 @@
     font-weight: normal;
   }
   &:hover {
+    border: 1px solid var(--dark-green, #2f463a);
+    background: var(--Grayscale-White, #fff);
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.35);
     h3 {
-      // text-decoration: underline;
-      color: #0077d9;
+      text-decoration: underline;
+      // color: #0077d9;
     }
   }
 }
@@ -946,6 +965,7 @@
 .filterBlocks {
   max-width: 900px;
   margin: 0 auto;
+  margin-top: 24px;
   .topTitle {
     margin-bottom: 20px;
   }
@@ -975,7 +995,8 @@
 }
 
 .resull_filter {
-  padding: 40px 0px 40px 0px;
+  padding: 24px 0px 40px 0px;
+  background: #fff;
   @include desk {
     .col-le {
       -ms-flex: 0 0 22%;
@@ -1595,8 +1616,11 @@ p.date {
 
 // ===== Event Detail starts =====
 .event-detail {
-  padding-top: 0px;
-  padding-bottom: 0px;
+  max-width: 1200px;
+  margin: 24px auto;
+  padding: 40px;
+  background: #fff;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.25);
   .back {
     margin-bottom: 24px;
     display: flex;
@@ -1616,7 +1640,11 @@ p.date {
   .evt-row {
   }
   h1 {
-    margin-bottom: 32px;
+    margin-bottom: 12px;
+  }
+  .evt_cat {
+    display: inline-block;
+    margin-bottom: 10px;
   }
   .event-dt-info {
     padding-bottom: 40px;
@@ -1640,8 +1668,10 @@ p.date {
     width: fit-content;
   }
   .date {
-    color: $black;
-    font-size: 16px;
+    color: #394b6f;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
   }
   .dt-info {
     p {
@@ -1674,14 +1704,15 @@ p.date {
 
 .cancel-info {
   color: #fff;
-  font-family: $secondary-font;
-  font-size: 16px;
-  text-transform: uppercase;
-  font-weight: bold;
-  background: #d60004;
-  padding: 5px 8px;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  font-family: $primary-font;
+  padding: 4px 16px;
   display: table;
-  margin-bottom: 10px;
+  border-radius: 2px;
+  background: #9d0a08;
 }
 
 .related_events {

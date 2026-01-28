@@ -185,7 +185,7 @@ strong {
     line-height: 1.3;
     border-radius: 3px;
     text-align: center;
-    border:3px solid $secondary;
+    border: 3px solid $secondary;
     // box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
     &:hover {
         background: $lightgreen;
@@ -503,5 +503,18 @@ label.title {
             filter: brightness(0) saturate(100%) invert(28%) sepia(88%) saturate(2780%) hue-rotate(192deg)
                 brightness(94%) contrast(101%);
         }
+    }
+}
+
+.evt_cat {
+    font-size: 12px;
+    font-weight: 300;
+    span {
+        width: 12px;
+        height: 12px;
+        flex-shrink: 0;
+        aspect-ratio: 1/1;
+        margin-right: 4px;
+        display: inline-block;
     }
 }
